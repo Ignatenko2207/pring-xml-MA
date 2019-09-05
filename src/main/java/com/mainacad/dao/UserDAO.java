@@ -11,17 +11,16 @@ import com.mainacad.dao.connection.ConnectionFactory;
 import com.mainacad.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-//import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 @Setter
 @Getter
-//@Component
-//@Repository
-//@Qualifier("userDAO")
+@Component
 public class UserDAO{
 
-//    @Autowired
-//    @Qualifier("h2Factory")
+    @Autowired
 	private ConnectionFactory connectionFactory;
 	
 	public void saveOrUpdate(User user){

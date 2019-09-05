@@ -9,12 +9,13 @@ import com.mainacad.entity.Item;
 import com.mainacad.entity.Order;
 import com.mainacad.entity.User;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.Properties;
 
-//@Component
-//@Qualifier("postgreFactory")
+@Component
+@Profile("dev")
 public class PostgresFactory implements ConnectionFactory {
 
     public SessionFactory getSessionFactory() {

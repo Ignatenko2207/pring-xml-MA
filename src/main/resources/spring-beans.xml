@@ -5,13 +5,13 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
-<!--    <context:component-scan base-package="com.mainacad" />-->
+    <context:component-scan base-package="com.mainacad" />
 
 
-    <bean id="h2-factory" class="com.mainacad.dao.connection.H2Factory"/>
-    <bean id="postgres-factory" class="com.mainacad.dao.connection.PostgresFactory"/>
+<!--    <bean id="h2-factory" class="com.mainacad.dao.connection.H2Factory"/>-->
+<!--    <bean id="postgres-factory" class="com.mainacad.dao.connection.PostgresFactory"/>-->
 
-    <bean id="userDAO" class="com.mainacad.dao.UserDAO">
-        <property name="connectionFactory" ref="h2-factory"/>
-    </bean>
+<!--    <bean id="userDAO" class="com.mainacad.dao.UserDAO">-->
+<!--        <property name="connectionFactory" ref="h2-factory"/>-->
+<!--    </bean>-->
 </beans>

@@ -12,11 +12,11 @@ import com.mainacad.entity.Order;
 import com.mainacad.entity.User;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-//@Component
-//@Qualifier("h2Factory")
-//@Primary
+@Component
+@Profile("test")
 public class H2Factory implements ConnectionFactory {
 
     public SessionFactory getSessionFactory() {

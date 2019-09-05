@@ -32,7 +32,7 @@ public class ApplicationRunnerXML
             client.setPassword("12345");
             client.setProfile(Profile.CLIENT);
 
-            UserDAO userDAO = (UserDAO) context.getBean("userDAO");
+            UserDAO userDAO = context.getBean(UserDAO.class);
 
             userDAO.saveOrUpdate(admin);
             userDAO.saveOrUpdate(client);
