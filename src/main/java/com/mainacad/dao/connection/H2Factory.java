@@ -14,9 +14,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
-@Qualifier("h2Factory")
-@Primary
+//@Component
+//@Qualifier("h2Factory")
+//@Primary
 public class H2Factory implements ConnectionFactory {
 
     public SessionFactory getSessionFactory() {
@@ -26,7 +26,7 @@ public class H2Factory implements ConnectionFactory {
             Properties properties = new Properties();
 
             properties.setProperty("hibernate.connection.driverClassName", "org.h2.Driver");
-            properties.setProperty("hibernate.connection.url", "jdbc:h2:~/e-store");
+            properties.setProperty("hibernate.connection.url", "jdbc:h2:~/spring-xml-test-db-ma");
             properties.setProperty("hibernate.connection.username", "alex");
             properties.setProperty("hibernate.connection.password", "pass");
             properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");

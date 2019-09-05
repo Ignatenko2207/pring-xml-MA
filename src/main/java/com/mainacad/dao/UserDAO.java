@@ -2,6 +2,8 @@ package com.mainacad.dao;
 
 import java.util.List;
 
+import com.mainacad.dao.connection.H2Factory;
+import com.mainacad.dao.connection.PostgresFactory;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.Session;
@@ -9,16 +11,16 @@ import com.mainacad.dao.connection.ConnectionFactory;
 import com.mainacad.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Repository;
+//import org.springframework.stereotype.Repository;
 
 @Setter
 @Getter
 //@Component
-@Repository
-@Qualifier("userDAO")
+//@Repository
+//@Qualifier("userDAO")
 public class UserDAO{
 
-    @Autowired
+//    @Autowired
 //    @Qualifier("h2Factory")
 	private ConnectionFactory connectionFactory;
 	

@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Properties;
 
-@Component
-@Qualifier("postgreFactory")
+//@Component
+//@Qualifier("postgreFactory")
 public class PostgresFactory implements ConnectionFactory {
 
     public SessionFactory getSessionFactory() {
@@ -24,7 +24,7 @@ public class PostgresFactory implements ConnectionFactory {
             Properties properties = new Properties();
 
             properties.setProperty("hibernate.connection.driverClassName", "org.postgresql.Driver");
-            properties.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/e-store");
+            properties.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/spring-xml-test-db-ma");
             properties.setProperty("hibernate.connection.username", "postgres");
             properties.setProperty("hibernate.connection.password", "248842");
             properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
