@@ -3,18 +3,19 @@ package com.mainacad;
 import com.mainacad.dao.UserDAO;
 import com.mainacad.entity.Profile;
 import com.mainacad.entity.User;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.logging.Logger;
 
-public class ApplicationRunnerXML
+public class ApplicationRunner
 {
-    private static final Logger LOG = Logger.getLogger(ApplicationRunnerXML.class.getName());
+    private static final Logger LOG = Logger.getLogger(ApplicationRunner.class.getName());
 
     public static void main( String[] args )
     {
-        try (ClassPathXmlApplicationContext context =
-                     new ClassPathXmlApplicationContext("spring-beans.xml")){
+        try (AnnotationConfigApplicationContext context =
+                     new AnnotationConfigApplicationContext("com.mainacad")){
 
             User admin = new User();
             admin.setEmail("ignatenko2207@gmail.com");

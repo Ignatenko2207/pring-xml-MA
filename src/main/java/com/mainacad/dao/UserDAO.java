@@ -17,7 +17,6 @@ import org.springframework.stereotype.Repository;
 
 @Setter
 @Getter
-@Component
 public class UserDAO{
 
     @Autowired
